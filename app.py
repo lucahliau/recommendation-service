@@ -87,11 +87,11 @@ def recommend_products(user_liked_centers, user_disliked_centers, products_df, t
     return recommended.head(top_n)
 
 # ------------------------------
-# Endpoint: /calculate_preferences
+# Endpoint: /calculatePreferences
 # ------------------------------
-@app.route('/calculate_preferences', methods=['POST'])
+@app.route('/calculatePreferences', methods=['POST'])
 def calculate_preferences_endpoint():
-    app.logger.info("Received /calculate_preferences request.")
+    app.logger.info("Received /calculatePreferences request.")
     try:
         data = request.get_json(force=True)
         app.logger.info(f"Input data: {data}")
