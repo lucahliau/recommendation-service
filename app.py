@@ -218,3 +218,8 @@ def recommend_endpoint():
 
     return jsonify(rec_list), 200
 
+if __name__ == '__main__':
+    import os
+    port = int(os.environ.get("PORT", 10000))
+    app.logger.info(f"Starting Flask app on port {port}")
+    app.run(host='0.0.0.0', port=port)
