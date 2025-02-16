@@ -191,6 +191,10 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.INFO)
 app.logger.info("Starting recommendation service...")
 
+@app.route('/')
+def test():
+    return 'Backend server is running'
+
 # ------------------------------
 # Helper: Build DataFrame from posts.
 # ------------------------------
